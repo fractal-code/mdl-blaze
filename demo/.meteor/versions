@@ -1,3 +1,4 @@
+aldeed:simple-schema@0.1.13
 allow-deny@1.0.5
 autoupdate@1.2.11
 babel-compiler@6.9.1
@@ -8,14 +9,11 @@ blaze@2.1.8
 blaze-html-templates@1.0.4
 blaze-tools@1.0.9
 boilerplate-generator@1.0.9
-browser-policy@1.0.9
-browser-policy-common@1.0.10
-browser-policy-content@1.0.11
-browser-policy-framing@1.0.11
 caching-compiler@1.0.6
 caching-html-compiler@1.0.6
 callback-hook@1.0.9
 check@1.2.3
+coffeescript@1.0.17
 ddp@1.2.5
 ddp-client@1.2.9
 ddp-common@1.2.6
@@ -54,6 +52,8 @@ mongo-id@1.0.5
 npm-mongo@1.5.48
 observe-sequence@1.0.12
 ordered-dict@1.0.8
+ostrio:flow-router-extra@2.12.2
+ostrio:flow-router-title@2.1.1
 promise@0.8.4
 random@1.0.10
 reactive-dict@1.1.8
@@ -66,6 +66,8 @@ spacebars@1.0.12
 spacebars-compiler@1.0.12
 standard-minifier-css@1.2.0
 standard-minifier-js@1.2.0
+talos:forms@0.3.5
+templates:forms@1.0.0
 templating@1.1.14
 templating-tools@1.0.4
 tracker@1.1.0

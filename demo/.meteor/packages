@@ -21,5 +21,8 @@ shell-server@0.2.1            # Server-side component of the `meteor shell` comm
 kadira:flow-router
 kadira:blaze-layout
 fourseven:scss
-browser-policy
 zodiase:mdl
+ostrio:flow-router-title
+talos:forms
+aldeed:simple-schema
+templates:forms
