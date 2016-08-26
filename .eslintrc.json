@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "extends": "airbnb/base",
+  "rules": {
+    "func-names": "off"
+  },
+  "settings": {
+    "import/resolver": "meteor"
+  }
+}
