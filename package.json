@@ -1,0 +1,17 @@
+{
+  "name": "mdl-blaze",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "meteor-node-stubs": "~0.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.3.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-import-resolver-meteor": "^0.3.3",
+    "eslint-plugin-import": "^1.14.0"
+  }
+}
