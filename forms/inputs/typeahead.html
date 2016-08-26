@@ -1,0 +1,30 @@
+<template name="typeahead">
+    {{#mdlWrapper}}
+        <div class="mdl-textfield mdl-textfield--floating-label typeahead-container typeahead-container-js
+        is-dirty getmdl-select">
+            {{!-- Hidden input field, holds the data for the chosen value-key as this may differ from search key --}}
+            <input type="select" name="{{field}}" class="reactive-element" data-target="{{target}}" hidden>
+
+            {{!-- Typeahead input, searches for key in "source" --}}
+            <input type="text" class="mdl-textfield__input typeahead typeahead-input-js"
+                   autocomplete="off" spellcheck="false"
+                   data-highlight="true"
+                   data-min-length="0"
+                   value="{{value}}"
+                   id="{{name}}"
+                   placeholder="{{description}}"
+                   data-template="{{template}}"
+                   data-source="{{source}}" data-value-key="{{key}}">
+            {{!-- Label & icon --}}
+            <label for="{{name}}">
+                <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+            </label>
+            <label class="mdl-textfield__label" for="{{name}}">{{label}}</label>
+
+            {{!-- Error messages --}}
+            {{#if submitted}}
+                {{#if errorMessage}}<span class="mdl-textfield__error {{errorClass}}">{{errorMessage}}</span>{{/if}}
+            {{/if}}
+        </div>
+    {{/mdlWrapper}}
+</template>

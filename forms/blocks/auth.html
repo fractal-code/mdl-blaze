@@ -1,0 +1,14 @@
+<!-- Auth form block -->
+<template name="authFormBlock">
+    <form class="{{class}}">
+        {{!-- Load form content --}}
+        <div class="{{#if authInProgress}}hidden{{/if}}">
+            {{> UI.contentBlock data=data context=context}}
+        </div>
+
+        {{!-- Progress indicator --}}
+        {{#if authInProgress}}
+            <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+        {{/if}}
+    </form>
+</template>

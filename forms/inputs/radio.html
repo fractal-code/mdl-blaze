@@ -1,0 +1,16 @@
+<template name="radioInput">
+    <div class="form__input {{containerClass}}">
+        {{!-- Iterate over radio group options --}}
+        {{#each options}}
+            <label class="form__input mdl-radio mdl-js-radio {{outerLabelClass}}" for="{{name}}">
+                <input class="mdl-radio__button reactive-element {{inputClass}}" id="{{name}}"
+                       name="{{field}}" type="radio" value="{{setValue}}" {{attributes}}>
+                <span class="mdl-radio__label {{innerLabelClasss}}">{{description}}</span>
+            </label>
+        {{/each}}
+        {{!-- Display error messages--}}
+        {{#if submitted}}
+            {{#if errorMessage}}<span class="mdl-textfield__error {{errorClass}}">{{errorMessage}}</span>{{/if}}
+        {{/if}}
+    </div>
+</template>

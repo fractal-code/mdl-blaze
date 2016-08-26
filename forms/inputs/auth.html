@@ -1,0 +1,8 @@
+<!-- Auth input element -->
+<template name="authInput">
+    <input type="{{type}}" name="{{field}}" placeholder="{{instructions}}"
+           class="{{class}} reactive-element">
+    {{#if submitted}}
+        {{#if errorMessage}}<span class="auth-error">{{errorMessage}}</span>{{/if}}
+    {{/if}}
+</template>
