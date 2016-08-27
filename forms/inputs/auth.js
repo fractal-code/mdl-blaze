@@ -1,5 +1,6 @@
-//Auth input element
+// Auth input element
+
 ReactiveForms.createElement({
   template: 'authInput',
-  validationEvent: 'input'
+  validationEvent: 'input',
 });

@@ -1,5 +1,6 @@
-//Base form block
+// Base form block
+
 ReactiveForms.createFormBlock({
   template: 'baseFormBlock',
-  submitType: 'normal'
+  submitType: 'normal',
 });

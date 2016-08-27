@@ -1,5 +1,6 @@
-//Area input element
+// Area input element
+
 ReactiveForms.createElement({
   template: 'areaInput',
-  validationEvent: 'input'
+  validationEvent: 'input',
 });

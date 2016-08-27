@@ -1,6 +1,6 @@
-//Text input element
+// Text input element
 
 ReactiveForms.createElement({
   template: 'textInput',
-  validationEvent: 'blur'
+  validationEvent: 'blur',
 });

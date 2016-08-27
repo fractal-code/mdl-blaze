@@ -1,4 +1,5 @@
-//Text input element
+// Text input element
+
 ReactiveForms.createElement({
   template: 'textInput',
   validationEvent: 'input',
