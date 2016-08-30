@@ -26,6 +26,8 @@ Package.onUse(function (api) {
     'blocks/base.html',
     'blocks/base.js',
     // Inputs
+    'inputs/simple.html',
+    'inputs/simple.js',
     'inputs/area.html',
     'inputs/area.js',
     'inputs/auth.html',
