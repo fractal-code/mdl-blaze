@@ -1,5 +1,7 @@
 // Select input element
 
+import { Template } from 'meteor/templating';
+
 Template.selectInput.events({
   'click .js-select-item'(e, tmpl) {
     const $selectInput = tmpl.$('.js-select-input');

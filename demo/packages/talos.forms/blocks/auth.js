@@ -1,7 +1,8 @@
 // Auth form block
 
+import { Meteor } from 'meteor/meteor';
+import { ReactiveForms } from 'meteor/templates:forms';
 import { Template } from 'meteor/templating';
-import { ReactiveForms } from 'meteor/template:forms';
 
 ReactiveForms.createFormBlock({
   template: 'authFormBlock',

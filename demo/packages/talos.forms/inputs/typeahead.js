@@ -1,5 +1,10 @@
 // Typeahead input element
 
+import { Meteor } from 'meteor/meteor';
+import { ReactiveForms } from 'meteor/templates:forms';
+import { Template } from 'meteor/templating';
+
+
 // Register element with ReactiveForms
 ReactiveForms.createElement({
   template: 'typeahead',
@@ -7,10 +12,10 @@ ReactiveForms.createElement({
 });
 
 Template.typeahead.onRendered(function () {
-  var valueKey,
-    $reactiveElement;
+  let $reactiveElement;
+
   // Get value key from template data context
-  valueKey = this.data.valueKey;
+  const valueKey = this.data.valueKey;
   // Inject data
   Meteor.typeahead.inject();
 
@@ -28,7 +33,7 @@ Template.typeahead.events({
     $(e.currentTarget).parents('.typeahead-container-js').addClass('is-focused is-dirty');
   },
   'blur .typeahead-input-js'(e) {
-    var $currentTarget = $(e.currentTarget);
+    const $currentTarget = $(e.currentTarget);
     $currentTarget.parents('.typeahead-container-js').removeClass('is-focused');
   },
 });
