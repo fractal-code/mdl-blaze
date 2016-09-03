@@ -18,14 +18,18 @@ Package.onUse(function (api) {
   api.use('templates:forms');
 
   api.imply('aldeed:simple-schema');
-  
+
   api.addFiles([
-    //Blocks
+    // Templates
+    'templates/wrapper.html',
+
+    // Blocks
     'blocks/auth.html',
     'blocks/auth.js',
     'blocks/base.html',
     'blocks/base.js',
-    //Inputs 
+
+    // Inputs
     'inputs/area.html',
     'inputs/area.js',
     'inputs/auth.html',
