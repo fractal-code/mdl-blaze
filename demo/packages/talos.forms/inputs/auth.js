@@ -1,8 +1,5 @@
-// Auth input element
-
-import { ReactiveForms } from 'meteor/templates:forms';
-
+//Auth input element
 ReactiveForms.createElement({
   template: 'authInput',
-  validationEvent: 'input',
+  validationEvent: 'input'
 });

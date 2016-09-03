@@ -7,7 +7,7 @@ Package.describe({
   git: '',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
-  documentation: 'README.md',
+  documentation: 'README.md'
 });
 
 Package.onUse(function (api) {
@@ -18,16 +18,14 @@ Package.onUse(function (api) {
   api.use('templates:forms');
 
   api.imply('aldeed:simple-schema');
-
+  
   api.addFiles([
-    // Blocks
+    //Blocks
     'blocks/auth.html',
     'blocks/auth.js',
     'blocks/base.html',
     'blocks/base.js',
-    // Inputs
-    'inputs/simple.html',
-    'inputs/simple.js',
+    //Inputs 
     'inputs/area.html',
     'inputs/area.js',
     'inputs/auth.html',
@@ -40,6 +38,6 @@ Package.onUse(function (api) {
     'inputs/text.js',
     'inputs/time.html',
     'inputs/typeahead.html',
-    'inputs/typeahead.js',
+    'inputs/typeahead.js'
   ], 'client');
 });

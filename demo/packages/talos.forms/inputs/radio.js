@@ -1,8 +1,5 @@
-// Radio input element
-
-import { ReactiveForms } from 'meteor/templates:forms';
-
+//Radio input element
 ReactiveForms.createElement({
   template: 'radioInput',
-  validationEvent: 'change',
+  validationEvent: 'change'
 });

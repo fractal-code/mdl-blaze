@@ -1,8 +1,6 @@
-// Text input element
-
-import { ReactiveForms } from 'meteor/templates:forms';
+//Text input element
 
 ReactiveForms.createElement({
   template: 'textInput',
-  validationEvent: 'blur',
+  validationEvent: 'blur'
 });

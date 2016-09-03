@@ -1,8 +1,5 @@
-// Area input element
-
-import { ReactiveForms } from 'meteor/templates:forms';
-
+//Area input element
 ReactiveForms.createElement({
   template: 'areaInput',
-  validationEvent: 'input',
+  validationEvent: 'input'
 });

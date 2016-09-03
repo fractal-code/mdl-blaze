@@ -1,8 +1,5 @@
-// Base form block
-
-import { ReactiveForms } from 'meteor/templates:forms';
-
+//Base form block
 ReactiveForms.createFormBlock({
   template: 'baseFormBlock',
-  submitType: 'normal',
+  submitType: 'normal'
 });

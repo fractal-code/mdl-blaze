@@ -1,28 +1,23 @@
-// Auth form block
-
-import { Meteor } from 'meteor/meteor';
-import { ReactiveForms } from 'meteor/templates:forms';
-import { Template } from 'meteor/templating';
+//Auth form block
 
 ReactiveForms.createFormBlock({
   template: 'authFormBlock',
-  submitType: 'normal',
+  submitType: 'normal'
 });
 
 Template.authFormBlock.helpers({
-  authInProgress() {
+  authInProgress: function () {
     return Meteor.loggingIn();
-  },
+  }
 });
 
 Template.authFormBlock.events({
-  // Highlight focused row
-  'focus .auth-textfield'(e) {
+  //Highlight focused row
+  'focus .auth-textfield': function (e) {
     $(e.currentTarget).parent('.auth-row').addClass('is-active');
   },
-
-  // Remove highlight from row on blur
-  'blur .auth-textfield'(e) {
+  //Remove highlight from row on blur
+  'blur .auth-textfield': function (e) {
     $(e.currentTarget).parent('.auth-row').removeClass('is-active');
-  },
+  }
 });

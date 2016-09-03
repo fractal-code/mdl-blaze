@@ -1,15 +1,13 @@
 <!-- Base input element -->
 <template name="textInput">
-    {{see this}}
     <div id="{{field}}-container" class="mdl-textfield mdl-js-textfield {{containerClass}}">
         <input id="{{field}}" name="{{field}}"
             {{attributes}} value="{{value}}"
                class="mdl-textfield__input reactive-element {{inputClass}}"
-               type="{{type}}" autocomplete="off" placeholder="{{placeholder}}">
+               type="{{type}}" autocomplete="off">
         <label class="mdl-textfield__label {{labelClass}}" for="{{field}}">{{label}}</label>
         {{#if submitted}}
             {{#if errorMessage}}<span class="mdl-textfield__error {{errorClass}}">{{errorMessage}}</span>{{/if}}
         {{/if}}
-
     </div>
 </template>
