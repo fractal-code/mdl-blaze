@@ -22,8 +22,9 @@
         </header>
 
         <main class="mdl-layout__content">
-            {{>Template.dynamic template=main}}
+            <div class="mdl-layout__tab-panel is-active" id="overview">
+                {{>Template.dynamic template=main}}
+            </div>
         </main>
-
     </div>
 </template>
