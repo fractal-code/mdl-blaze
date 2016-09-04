@@ -12,6 +12,7 @@ import '/imports/ui/pages/form/text.html';
 import '/imports/ui/pages/form/area.html';
 import '/imports/ui/pages/form/typeahead.html';
 import '/imports/ui/pages/form/time.html';
+import '/imports/ui/pages/form/select.html';
 
 // Pages JS
 import '/imports/ui/pages/home.js';
@@ -19,3 +20,4 @@ import '/imports/ui/pages/form/text.js';
 import '/imports/ui/pages/form/area.js';
 import '/imports/ui/pages/form/typeahead.js';
 import '/imports/ui/pages/form/time.js';
+import '/imports/ui/pages/form/select.js';

@@ -6,11 +6,16 @@ import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 Template.typeAhead.helpers({
   schema() {
     return new SimpleSchema({
-      demo: {
+      defaultOutgoingNumber: {
         type: String,
-        label: 'Demo',
+        regEx: /^\+?[0-9]{3}-?[0-9]{6,12}$/,
       },
     });
+  },
+  demoData() {
+    return {
+      target: 'test',
+    };
   },
   action() {
     return function (els, callbacks, changed) {

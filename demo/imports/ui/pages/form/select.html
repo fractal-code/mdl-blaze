@@ -1,0 +1,15 @@
+<template name="select">
+    {{# uiBlock}}
+        <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+            <h4 class="mdl-cell mdl-cell--12-col">selectInput</h4>
+            <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                {{#baseFormBlock id="demoForm1" schema=schema action=action}}
+                    {{> selectInput field="demo"}}
+                {{/baseFormBlock}}
+            </div>
+        </div>
+        <div class="mdl-card__actions">
+            <a href="#" class="mdl-button">Read our features</a>
+        </div>
+    {{/ uiBlock}}
+</template>

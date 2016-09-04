@@ -13,7 +13,7 @@ Package.describe({
 Package.onUse(function (api) {
   api.versionsFrom('1.2.1');
   api.use('ecmascript');
-  api.use(['livedata', 'underscore', 'deps', 'templating', 'ui', 'blaze', 'ejson', 'reactive-var', 'reactive-dict', 'random', 'jquery'], 'client');
+  api.use(['livedata', 'underscore', 'deps', 'templating', 'ui', 'blaze', 'ejson', 'reactive-var', 'reactive-dict', 'random', 'jquery', 'sergeyt:typeahead'], 'client');
 
   api.use('templates:forms');
 

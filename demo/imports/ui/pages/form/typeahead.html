@@ -3,8 +3,13 @@
         <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
             <h4 class="mdl-cell mdl-cell--12-col">typeahead</h4>
             <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                {{#baseFormBlock id="demoForm1" schema=schema action=action}}
-                    {{> typeahead field="demo"}}
+                {{#baseFormBlock name="demoTypeahead" data=demoData
+                                 class="form form--inline form-card__content" schema=schema
+                                 action=action}}
+                    {{> typeahead field="defaultOutgoingNumber" name="defaultOutgoingNumber"
+                            valueKey="number"
+                            description="Enter outgoing number" source="numbersList"
+                            template="numberForwardItem" key="number"}}
                 {{/baseFormBlock}}
             </div>
         </div>

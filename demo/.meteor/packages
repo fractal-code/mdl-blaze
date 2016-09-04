@@ -26,3 +26,4 @@ ostrio:flow-router-title
 templates:forms@2.1.4
 talos:forms
 aldeed:simple-schema
+sergeyt:typeahead
