@@ -6,10 +6,7 @@
                 {{#baseFormBlock name="demoTypeahead" data=demoData
                                  class="form form--inline form-card__content" schema=schema
                                  action=action}}
-                    {{> typeahead field="defaultOutgoingNumber" name="defaultOutgoingNumber"
-                            valueKey="number"
-                            description="Enter outgoing number" source="numbersList"
-                            template="numberForwardItem" key="number"}}
+                    {{> typeahead field="demoField" options=typeaheadOptions }}
                 {{/baseFormBlock}}
             </div>
         </div>
@@ -17,4 +14,10 @@
             <a href="#" class="mdl-button">Read our features</a>
         </div>
     {{/ uiBlock}}
+</template>
+
+<template name="numberForwardItem">
+    <div class="typeahead-item-container typeahead-item-js">
+        <span class="typeahead-item-text">+{{number}} {{#if displayName}} ({{displayName}}){{/if}}</span>
+    </div>
 </template>

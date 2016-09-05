@@ -7,20 +7,24 @@
             <input type="select" name="{{field}}" class="reactive-element" data-target="{{target}}" hidden>
 
             {{!-- Typeahead input, searches for key in "source" --}}
-            <input type="text" class="mdl-textfield__input typeahead typeahead-input-js"
-                   autocomplete="off" spellcheck="false"
+            <input type="text"
+                   class="mdl-textfield__input typeahead typeahead-input-js"
+                   autocomplete="off"
+                   spellcheck="false"
                    data-highlight="true"
                    data-min-length="0"
-                   value="{{value}}"
-                   id="{{name}}"
-                   placeholder="{{description}}"
-                   data-template="{{template}}"
-                   data-source="{{source}}" data-value-key="{{key}}">
+                   value="{{options.value}}"
+                   id="{{options.name}}"
+                   placeholder="{{options.description}}"
+                   data-template="{{options.template}}"
+                   data-source="{{options.source}}"
+                   data-value-key="{{options.key}}">
+
             {{!-- Label & icon --}}
-            <label for="{{name}}">
+            <label for="{{options.name}}" class=" typeahead-label">
                 <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
             </label>
-            <label class="mdl-textfield__label" for="{{name}}">{{label}}</label>
+            <label class="mdl-textfield__label" for="{{options.name}}">{{label}}</label>
 
             {{!-- Error messages --}}
             {{#if submitted}}

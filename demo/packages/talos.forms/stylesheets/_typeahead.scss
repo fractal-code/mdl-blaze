@@ -1,0 +1,78 @@
+//Typeahead element styles
+
+.typeahead-container, .twitter-typeahead {
+  width: 300px !important;
+
+  input,
+  input::-webkit-input-placeholder {
+    font-size: 13px;
+  }
+}
+
+.typeahead-item-container {
+  padding: 16px;
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(238, 238, 238);
+  }
+}
+
+.typeahead-item-icon {
+  margin-right: 16px;
+}
+
+.tt-menu {
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+  0 3px 1px -2px rgba(0, 0, 0, 0.2),
+  0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  width: 300px;
+}
+
+.tt-dataset {
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+// Form group "fit" override
+
+.form__group--fit {
+  .typeahead-container, .twitter-typeahead {
+    width: 200px !important
+  }
+  .tt-menu {
+    width: 200px;
+  }
+}
+
+.chips {
+  margin: 22px 8px 0;
+}
+
+.chip {
+  display: inline-block;
+  height: 20px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 4px 8px;
+  border-radius: 16px;
+  margin: 3px;
+}
+
+.chip i.material-icons {
+  cursor: pointer;
+  float: right;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 8px;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.typeahead-label {
+  float: right;
+  margin-top: -30px;
+}
