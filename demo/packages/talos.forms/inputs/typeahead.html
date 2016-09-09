@@ -4,21 +4,18 @@
         is-dirty getmdl-select">
             {{see this}}
             {{!-- Hidden input field, holds the data for the chosen value-key as this may differ from search key --}}
-            <input type="select" name="{{field}}" class="reactive-element" data-target="{{target}}" hidden>
+            <input type="select" name="{{field}}" class="reactive-element" data-target="{{target}}"
+                   hidden>
 
             {{!-- Typeahead input, searches for key in "source" --}}
-            <input type="text"
-                   class="mdl-textfield__input typeahead typeahead-input-js"
-                   autocomplete="off"
-                   spellcheck="false"
-                   data-highlight="true"
-                   data-min-length="0"
-                   value="{{options.value}}"
-                   id="{{options.name}}"
-                   placeholder="{{options.description}}"
-                   data-template="{{options.template}}"
-                   data-source="{{options.source}}"
-                   data-value-key="{{options.key}}">
+
+            <input {{getOptions this.options}}
+                    type="text"
+                    class="mdl-textfield__input typeahead typeahead-input-js"
+                    autocomplete="off"
+                    spellcheck="false"
+                    data-highlight="true"
+                    data-min-length="0">
 
             {{!-- Label & icon --}}
             <label for="{{options.name}}" class=" typeahead-label">
@@ -28,8 +25,16 @@
 
             {{!-- Error messages --}}
             {{#if submitted}}
-                {{#if errorMessage}}<span class="mdl-textfield__error {{errorClass}}">{{errorMessage}}</span>{{/if}}
+                {{#if errorMessage}}
+                    <span class="mdl-textfield__error {{errorClass}}">{{errorMessage}}</span>
+                {{/if}}
             {{/if}}
         </div>
     {{/mdlWrapper}}
+</template>
+
+<template name="defaultTypeahead">
+    <div class="typeahead-item-container typeahead-item-js">
+        <span class="typeahead-item-text">{{data}} </span>
+    </div>
 </template>

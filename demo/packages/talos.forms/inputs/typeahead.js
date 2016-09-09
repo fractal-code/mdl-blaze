@@ -1,4 +1,8 @@
-//Typeahead input element
+// Typeahead input element
+
+import { Template } from 'meteor/templating';
+import { Meteor } from 'meteor/meteor';
+import { Blaze } from 'meteor/blaze';
 
 ReactiveForms.createElement({
   template: 'typeahead',
@@ -22,17 +26,34 @@ Template.typeahead.onRendered(function () {
 });
 
 Template.typeahead.helpers({
-  see(a){
+  see(a) {
     console.log(a);
+  },
+  getOptions(options) {
+    const typeaheadOptions = options;
+
+    // If we don't receive a valid template, use the default
+    if (!(Template[typeaheadOptions['data-template']] instanceof Blaze.Template)) {
+      typeaheadOptions['data-template'] = 'defaultTypeahead';
+
+      if (typeaheadOptions['data-value-key'] !== 'data') {
+        throw new Meteor.Error('If no template is given, use data for \'data-value-key\'');
+      } 
+    }
+    return typeaheadOptions;
   },
 });
 
 Template.typeahead.events({
-  'focus .typeahead-input-js': function (e) {
-    $(e.currentTarget).parents('.typeahead-container-js').addClass('is-focused is-dirty');
+  'focus .typeahead-input-js'(e) {
+    $(e.currentTarget)
+      .parents('.typeahead-container-js')
+      .addClass('is-focused is-dirty');
   },
-  'blur .typeahead-input-js': function (e) {
-    var $currentTarget = $(e.currentTarget);
-    $currentTarget.parents('.typeahead-container-js').removeClass('is-focused');
-  }
+  'blur .typeahead-input-js'(e) {
+    const $currentTarget = $(e.currentTarget);
+    $currentTarget
+      .parents('.typeahead-container-js')
+      .removeClass('is-focused');
+  },
 });
