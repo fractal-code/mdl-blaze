@@ -3,11 +3,7 @@
 import { Template } from 'meteor/templating';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
-Template.typeAhead.onCreated(function () {
-
-});
-
-Template.typeAhead.helpers({
+Template.typeaheadDemo.helpers({
   schema() {
     return new SimpleSchema({
       demoField: {
