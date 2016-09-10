@@ -2,19 +2,17 @@
     {{#mdlWrapper}}
         <div class="mdl-textfield mdl-textfield--floating-label typeahead-container typeahead-container-js
         is-dirty getmdl-select">
-            {{see this}}
+
             {{!-- Hidden input field, holds the data for the chosen value-key as this may differ from search key --}}
             <input type="select" name="{{field}}" class="reactive-element" data-target="{{target}}"
                    hidden>
 
-            {{!-- Typeahead input, searches for key in "source" --}}
-
+            {{!-- Typeahead input, searches for key in "data-source" --}}
             <input {{getOptions this.options}}
                     type="text"
                     class="mdl-textfield__input typeahead typeahead-input-js"
                     autocomplete="off"
                     spellcheck="false"
-                    data-highlight="true"
                     data-min-length="0">
 
             {{!-- Label & icon --}}
@@ -35,6 +33,6 @@
 
 <template name="defaultTypeahead">
     <div class="typeahead-item-container typeahead-item-js">
-        <span class="typeahead-item-text">{{data}} </span>
+        <span class="typeahead-item-text">{{data}}</span>
     </div>
 </template>

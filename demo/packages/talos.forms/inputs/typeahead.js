@@ -3,6 +3,7 @@
 import { Template } from 'meteor/templating';
 import { Meteor } from 'meteor/meteor';
 import { Blaze } from 'meteor/blaze';
+import { ReactiveForms } from 'meteor/templates:forms';
 
 ReactiveForms.createElement({
   template: 'typeahead',
@@ -10,15 +11,19 @@ ReactiveForms.createElement({
 });
 
 Template.typeahead.onRendered(function () {
-  var valueKey, $reactiveElement;
+  let valueKey = null;
+  let $reactiveElement = null;
+
   // Get value key from template data context
   valueKey = this.data.valueKey;
+
   // Inject data
   Meteor.typeahead.inject();
 
   // Set input value to data for the chosen value key
   this.$('.typeahead-container-js').on('typeahead:select', (e, obj) => {
     $reactiveElement = $(e.currentTarget).find('.reactive-element');
+
     $reactiveElement.val(obj[valueKey]);
     // Trigger 'change' event handler for reactive element
     $reactiveElement.trigger('change');
@@ -26,9 +31,6 @@ Template.typeahead.onRendered(function () {
 });
 
 Template.typeahead.helpers({
-  see(a) {
-    console.log(a);
-  },
   getOptions(options) {
     const typeaheadOptions = options;
 
@@ -37,8 +39,8 @@ Template.typeahead.helpers({
       typeaheadOptions['data-template'] = 'defaultTypeahead';
 
       if (typeaheadOptions['data-value-key'] !== 'data') {
-        throw new Meteor.Error('If no template is given, use data for \'data-value-key\'');
-      } 
+        throw new Meteor.Error('If no template is passed, use \'data\' for \'data-value-key\'');
+      }
     }
     return typeaheadOptions;
   },

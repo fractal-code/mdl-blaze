@@ -28,7 +28,7 @@ Template.typeAhead.helpers({
       valueKey: 'number',
       description: 'This is a demo',
       'data-source': 'numbersList',
-      'data-template': 'numberForwardItem',
+      'data-template': 'numbersForwardItem',
       'data-value-key': 'number',
     };
   },
