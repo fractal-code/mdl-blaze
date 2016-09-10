@@ -2,7 +2,7 @@ Package.describe({
   name: 'talos:forms',
   version: '1.0.0',
   // Brief, one-line summary of the package.
-  summary: 'Talos forms package for Material Design Lite',
+  summary: 'Talos forms package for Material Design Lite and templates:forms',
   // URL to the Git repository containing the source code for this package.
   git: 'https://github.com/talos-code/mdl-blaze',
   // By default, Meteor will default to using README.md for documentation.
@@ -12,12 +12,12 @@ Package.describe({
 
 Package.onUse(function (api) {
   api.versionsFrom('1.2.1');
-  api.use('ecmascript');
-  api.use(['livedata', 'underscore', 'deps', 'templating', 'ui', 'blaze', 'ejson', 'reactive-var', 'reactive-dict', 'random', 'jquery', 'sergeyt:typeahead', 'fourseven:scss','tmeasday:check-npm-versions'], 'client');
+  api.use(['ecmascript']);
+  api.use(['livedata', 'underscore', 'deps', 'templating', 'ui', 'blaze', 'ejson', 'reactive-var', 'reactive-dict', 'random', 'jquery', 'sergeyt:typeahead', 'fourseven:scss', 'tmeasday:check-npm-versions@0.3.1'], 'client');
 
   api.use('templates:forms');
 
-  api.imply('aldeed:simple-schema');
+  api.imply(['aldeed:simple-schema', 'tmeasday:check-npm-versions@0.3.1']);
 
   api.addFiles([
     // SCSS

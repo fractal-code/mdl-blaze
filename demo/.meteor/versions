@@ -72,6 +72,7 @@ talos:forms@1.0.0
 templates:forms@2.1.4
 templating@1.1.14
 templating-tools@1.0.4
+tmeasday:check-npm-versions@0.3.1
 tracker@1.1.0
 ui@1.0.11
 underscore@1.0.9
