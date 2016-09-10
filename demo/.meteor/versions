@@ -68,7 +68,7 @@ spacebars@1.0.12
 spacebars-compiler@1.0.12
 standard-minifier-css@1.2.0
 standard-minifier-js@1.2.0
-talos:forms@0.3.5
+talos:forms@1.0.0
 templates:forms@2.1.4
 templating@1.1.14
 templating-tools@1.0.4
