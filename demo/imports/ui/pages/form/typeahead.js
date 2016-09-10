@@ -17,10 +17,10 @@ Template.typeAhead.helpers({
     });
   },
   numbersList() {
-    return [{
-      number: '61283180767',
-      displayName: 'Forward to Yaser',
-    }];
+    return [
+      { data: 'Option 1' },
+      { data: 'Option 2' },
+    ];
   },
   typeaheadOptions() {
     return {
@@ -29,7 +29,7 @@ Template.typeAhead.helpers({
       description: 'This is a demo',
       'data-source': 'numbersList',
       'data-template': 'numbersForwardItem',
-      'data-value-key': 'number',
+      'data-value-key': 'data',
     };
   },
   action() {
