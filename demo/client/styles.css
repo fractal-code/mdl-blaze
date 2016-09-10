@@ -195,9 +195,6 @@ html, body {
     padding: 64px 0;
     margin: 0 -8px -8px -8px;
 }
-.mdl-demo section.section--center .section__text:not(:last-child) {
-    border-bottom: 1px solid rgba(0,0,0,.13);
-}
 .mdl-demo .mdl-card .mdl-card__supporting-text > h3:first-child {
     margin-bottom: 24px;
 }
@@ -235,4 +232,7 @@ html, body {
 }
 .mdl-demo .mdl-menu__container {
     z-index: 99;
+}
+.mdl-color--menu {
+    background-color: rgb(36,91,109) !important;
 }

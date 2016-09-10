@@ -1,6 +1,3 @@
 {
-  "theme": {
-    "primary": "deep_orange",
-    "accent": "blue"
-  }
+  "theme": false
 }

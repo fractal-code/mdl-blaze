@@ -1,5 +1,8 @@
 // Entry point UI
 
+// SCSS
+import '/imports/ui/mdl.scss';
+
 // Layouts
 import '/imports/ui/layouts/default.html';
 
