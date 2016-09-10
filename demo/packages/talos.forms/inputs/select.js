@@ -1,6 +1,13 @@
 // Select input element
 
 import { Template } from 'meteor/templating';
+import { checkNpmVersions } from 'meteor/tmeasday:check-npm-versions';
+
+checkNpmVersions({
+  jquery: '2.2.4',
+}, 'talos:forms');
+
+const $ = require('jquery');
 
 Template.selectInput.events({
   'click .js-select-item'(e, tmpl) {

@@ -17,7 +17,7 @@ Package.onUse(function (api) {
 
   api.use('templates:forms');
 
-  api.imply(['aldeed:simple-schema', 'tmeasday:check-npm-versions@0.3.1']);
+  api.imply(['aldeed:simple-schema', 'tmeasday:check-npm-versions@0.3.1', 'sergeyt:typeahead', 'fourseven:scss']);
 
   api.addFiles([
     // SCSS
