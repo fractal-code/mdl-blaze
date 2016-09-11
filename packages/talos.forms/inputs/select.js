@@ -10,10 +10,11 @@ checkNpmVersions({
 const $ = require('jquery');
 
 Template.selectInput.events({
-  'click .js-select-item'(e, tmpl) {
-    const $selectInput = tmpl.$('.js-select-input');
+  'click .js-select-item'(e, template) {
+    const $selectInput = template.$('.js-select-input');
     // Set select input value
     $selectInput.val($(e.currentTarget).text());
+
     // Emit change event
     $selectInput.trigger('change');
   },
