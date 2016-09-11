@@ -4,11 +4,10 @@ import { Template } from 'meteor/templating';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
 Template.select.helpers({
-  schema() {
+  selectSchema() {
     return new SimpleSchema({
-      demo: {
+      demoField: {
         type: String,
-        label: 'Demo',
       },
     });
   },
@@ -22,5 +21,8 @@ Template.select.helpers({
       callbacks.success(); // Display success message.
       callbacks.reset();   // Run each Element's custom `reset` function to clear the form.
     };
+  },
+  selectOptions() {
+    return ['Option 1', 'Option 2', 'Option 3'];
   },
 });

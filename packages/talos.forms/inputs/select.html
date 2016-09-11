@@ -4,21 +4,21 @@
         <div class="mdl-textfield {{class}} mdl-js-textfield mdl-textfield--floating-label js-select-input-container getmdl-select">
             <input class="mdl-textfield__input js-select-input" type="text" id="{{name}}" value="{{value}}" readonly
                    tabIndex="-1">
-            <label for="{{name}}">
+            <label for="{{name}}" class="select-label">
                 <i class="mdl-icon-toggle__label material-icons">
                     {{#if arrowUp}}
                         keyboard_arrow_up
                     {{else}}
                         keyboard_arrow_down
                     {{/if}}
-
                 </i>
             </label>
+
             <label for="{{name}}" class="mdl-textfield__label">{{label}}</label>
             {{#if options}}
                 <ul for="{{name}}" class="mdl-menu mdl-menu--{{direction}} mdl-js-menu">
                     {{#each options}}
-                        <li class="mdl-menu__item js-select-item">{{capitalize this}}</li>
+                        <li class="mdl-menu__item js-select-item">{{this}}</li>
                     {{/each}}
                 </ul>
             {{/if}}
