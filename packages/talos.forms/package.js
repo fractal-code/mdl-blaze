@@ -33,6 +33,8 @@ Package.onUse(function (api) {
     'blocks/base.js',
 
     // Inputs
+    'inputs/slider.html',
+    'inputs/slider.js',
     'inputs/area.html',
     'inputs/area.js',
     'inputs/auth.html',

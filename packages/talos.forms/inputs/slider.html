@@ -1,0 +1,13 @@
+<template name="slideInput">
+    {{#mdlWrapper}}
+        <p style="width:300px">
+            <input class="mdl-slider mdl-js-slider" type="range" id="s1" min="0" max="10" value="4"
+                   step="1">
+        </p>
+
+        {{#if submitted}}
+            {{#if errorMessage}}
+                <span class="mdl-textfield__error {{errorClass}}">{{errorMessage}}</span>{{/if}}
+        {{/if}}
+    {{/mdlWrapper}}
+</template>
