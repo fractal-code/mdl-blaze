@@ -1,0 +1,15 @@
+<template name="switchInput">
+    {{#mdlWrapper}}
+        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="{{name}}">
+            <input type="checkbox" id="{{name}}" class="mdl-switch__input" {{this.options}}>
+            <span class="mdl-switch__label"></span>
+        </label>
+
+        {{!-- Error messages --}}
+        {{#if submitted}}
+            {{#if errorMessage}}
+                <span class="mdl-textfield__error {{errorClass}}">{{errorMessage}}</span>
+            {{/if}}
+        {{/if}}
+    {{/mdlWrapper}}
+</template>
