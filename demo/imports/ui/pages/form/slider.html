@@ -3,19 +3,19 @@
         <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
             <h4 class="mdl-cell mdl-cell--12-col">slideInput</h4>
             <div class="section__text mdl-cell mdl-cell--5-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                {{#baseFormBlock id="demoForm1" schema=selectSchema action=action}}
-                    {{> slideInput name="demoField" label="Demo field"}}
-
+                {{#baseFormBlock id="demoFormSlider" schema=selectSchema action=action}}
+                    {{> slideInput name="demoField" options=sliderOptions}}
                 {{/baseFormBlock}}
             </div>
             <div class="section__text mdl-cell mdl-cell--5-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                 <p>Use typeahead to create an input that shows a list of options based on user
                     input.</p>
                 <p>The below arguments are required for the <strong>options</strong> object:</p>
-                <p><strong>data-template:</strong> If you want to customise the apparence of the typeahead box, provide the name of the template.</p>
+                <p><strong>data-template:</strong> If you want to customise the apparence of the
+                    typeahead box, provide the name of the template.</p>
                 <p><strong>data-source:</strong> provide an array of results (can be reactive)</p>
-                <p><strong>data-value-key:</strong> What is the key of your data-source that you want to use.</p>
-
+                <p><strong>data-value-key:</strong> What is the key of your data-source that you
+                    want to use.</p>
                 <p>You can add any other attribute.</p>
             </div>
         </div>

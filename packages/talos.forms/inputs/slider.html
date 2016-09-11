@@ -1,8 +1,7 @@
 <template name="slideInput">
     {{#mdlWrapper}}
         <p style="width:300px">
-            <input class="mdl-slider mdl-js-slider" type="range" id="s1" min="0" max="10" value="4"
-                   step="1">
+            <input class="mdl-slider mdl-js-slider" type="range" id="{{name}}" {{getOptions this.options}}>
         </p>
 
         {{#if submitted}}

@@ -22,4 +22,12 @@ Template.sliderDemo.helpers({
       callbacks.reset();   // Run each Element's custom `reset` function to clear the form.
     };
   },
+  sliderOptions() {
+    return {
+      min: 0,
+      max: 100,
+      value: 25,
+      step: 1,
+    };
+  },
 });
