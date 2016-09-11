@@ -30,4 +30,13 @@ Template.sliderDemo.helpers({
       step: 1,
     };
   },
+  sliderOptionsDisabled() {
+    return {
+      min: 0,
+      max: 100,
+      value: 25,
+      step: 1,
+      disabled: 'disabled',
+    };
+  },
 });

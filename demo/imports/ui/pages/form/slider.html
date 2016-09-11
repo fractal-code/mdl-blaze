@@ -4,7 +4,11 @@
             <h4 class="mdl-cell mdl-cell--12-col">slideInput</h4>
             <div class="section__text mdl-cell mdl-cell--5-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                 {{#baseFormBlock id="demoFormSlider" schema=selectSchema action=action}}
+                    <p>Enabled:</p>
                     {{> slideInput name="demoField" options=sliderOptions}}
+                    <br>
+                    <p>Disabled:</p>
+                    {{> slideInput name="demoField" options=sliderOptionsDisabled}}
                 {{/baseFormBlock}}
             </div>
             <div class="section__text mdl-cell mdl-cell--5-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
