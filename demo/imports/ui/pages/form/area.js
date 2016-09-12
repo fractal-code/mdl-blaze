@@ -3,7 +3,7 @@
 import { Template } from 'meteor/templating';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
-Template.area.helpers({
+Template.areaDemo.helpers({
   schema() {
     return new SimpleSchema({
       demo: {

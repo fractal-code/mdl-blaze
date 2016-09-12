@@ -3,7 +3,7 @@
 import { Template } from 'meteor/templating';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
-Template.select.helpers({
+Template.selectDemo.helpers({
   selectSchema() {
     return new SimpleSchema({
       demoField: {
