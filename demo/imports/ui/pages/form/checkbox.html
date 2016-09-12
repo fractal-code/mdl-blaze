@@ -1,10 +1,10 @@
-<template name="switchDemo">
+<template name="checkboxDemo">
     {{# uiBlock}}
         <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-            <h4 class="mdl-cell mdl-cell--12-col">switchInput</h4>
+            <h4 class="mdl-cell mdl-cell--12-col">checkboxInput</h4>
             <div class="section__text mdl-cell mdl-cell--5-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                {{#baseFormBlock id="demoFormSwitch" schema=schemaSwitch action=action}}
-                    {{> switchInput name="switchField"}}
+                {{#baseFormBlock id="demoFormCheckBox" schema=schema action=action}}
+                    {{> checkboxInput name="demoCheckbox" label="Demo field"}}
                 {{/baseFormBlock}}
             </div>
             <div class="section__text mdl-cell mdl-cell--5-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">

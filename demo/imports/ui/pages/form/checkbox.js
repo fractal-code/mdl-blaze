@@ -1,14 +1,13 @@
-// Helpers switchInput
+// Helpers textInput
 
 import { Template } from 'meteor/templating';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
-Template.switchDemo.helpers({
-  schemaSwitch() {
+Template.checkboxDemo.helpers({
+  schema() {
     return new SimpleSchema({
-      switchField: {
+      demoCheckbox: {
         type: String,
-        label: 'Demo',
       },
     });
   },

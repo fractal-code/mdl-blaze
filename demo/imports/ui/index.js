@@ -18,6 +18,7 @@ import '/imports/ui/pages/form/time.html';
 import '/imports/ui/pages/form/select.html';
 import '/imports/ui/pages/form/slider.html';
 import '/imports/ui/pages/form/switch.html';
+import '/imports/ui/pages/form/checkbox.html';
 
 // Pages JS
 import '/imports/ui/pages/home.js';
@@ -28,3 +29,4 @@ import '/imports/ui/pages/form/time.js';
 import '/imports/ui/pages/form/select.js';
 import '/imports/ui/pages/form/slider.js';
 import '/imports/ui/pages/form/switch.js';
+import '/imports/ui/pages/form/checkbox.js';
