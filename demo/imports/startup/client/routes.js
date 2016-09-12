@@ -8,14 +8,14 @@ import { FlowRouterTitle } from 'meteor/ostrio:flow-router-title';
 FlowRouter.route('/', {
   name: 'home',
   title: 'Homepage',
-  action: () => {
+  action() {
     BlazeLayout.render('default', { main: 'homePage' });
   },
 });
 
 // Others
 FlowRouter.notFound = {
-  action: () => {
+  action() {
     FlowRouter.go('home');
   },
 };
