@@ -35,6 +35,8 @@ Package.onUse(function (api) {
     // Inputs
     'inputs/switch.html',
     'inputs/switch.js',
+    'inputs/checkbox.html',
+    'inputs/checkbox.js',
     'inputs/slider.html',
     'inputs/slider.js',
     'inputs/area.html',

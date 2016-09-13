@@ -1,0 +1,15 @@
+<template name="checkboxInput">
+    {{#mdlWrapper}}
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+               for="{{field}}">
+            <input class="mdl-checkbox__input reactive-element" id="{{field}}"
+                   name="{{field}}" type="checkbox" {{attributes}}>
+            <span class="mdl-checkbox__label">{{description}}</span>
+        </label>
+        {{#if submitted}}
+            {{#if errorMessage}}
+                <span class="mdl-textfield__error {{errorClass}}">{{errorMessage}}</span>
+            {{/if}}
+        {{/if}}
+    {{/mdlWrapper}}
+</template>

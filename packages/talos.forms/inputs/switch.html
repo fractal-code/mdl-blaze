@@ -1,7 +1,7 @@
 <template name="switchInput">
     {{#mdlWrapper}}
-        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="{{name}}">
-            <input type="checkbox" id="{{name}}" class="mdl-switch__input" {{this.options}}>
+        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="{{field}}">
+            <input type="checkbox" id="{{field}}" name="{{field}}" class="mdl-switch__input reactive-element" {{this.options}}>
             <span class="mdl-switch__label"></span>
         </label>
 
