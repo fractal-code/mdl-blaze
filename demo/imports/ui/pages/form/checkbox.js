@@ -11,6 +11,12 @@ Template.checkboxDemo.helpers({
       },
     });
   },
+  optionsCheckbox() {
+    return [
+      { field: '1', description: 'Description 1' },
+      { field: '2', description: 'Description 2' },
+    ];
+  },
   action() {
     return function (els, callbacks, changed) {
       console.log('[forms] Action running!');
