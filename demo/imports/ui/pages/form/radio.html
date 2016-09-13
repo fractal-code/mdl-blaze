@@ -1,10 +1,10 @@
 <template name="radioDemo">
     {{# uiBlock}}
         <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-            <h4 class="mdl-cell mdl-cell--12-col">checkboxInput</h4>
+            <h4 class="mdl-cell mdl-cell--12-col">radioInput</h4>
             <div class="section__text mdl-cell mdl-cell--5-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                 {{#baseFormBlock id="demoFormCheckBox" schema=schema action=action}}
-                    {{> checkboxInput field="demoCheckbox" description="Demo field"}}
+                    {{> radioInput field="demoCheckbox" description="Demo field" options=optionsCheckbox}}
                 {{/baseFormBlock}}
             </div>
             <div class="section__text mdl-cell mdl-cell--5-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
