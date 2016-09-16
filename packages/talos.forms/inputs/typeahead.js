@@ -54,13 +54,13 @@ Template.typeahead.helpers({
 });
 
 Template.typeahead.events({
-  'focus .typeahead-input-js'(e) {
-    $(e.currentTarget)
+  'focus .typeahead-input-js'(event) {
+    $(event.currentTarget)
       .parents('.typeahead-container-js')
       .addClass('is-focused is-dirty');
   },
-  'blur .typeahead-input-js'(e) {
-    const $currentTarget = $(e.currentTarget);
+  'blur .typeahead-input-js'(event) {
+    const $currentTarget = $(event.currentTarget);
     $currentTarget
       .parents('.typeahead-container-js')
       .removeClass('is-focused');
