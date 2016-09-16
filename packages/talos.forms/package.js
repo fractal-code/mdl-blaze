@@ -50,6 +50,7 @@ Package.onUse(function (api) {
     'inputs/text.html',
     'inputs/text.js',
     'inputs/time.html',
+    'inputs/time.js',
     'inputs/typeahead.html',
     'inputs/typeahead.js',
 

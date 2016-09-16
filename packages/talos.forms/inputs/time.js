@@ -13,8 +13,8 @@ const $ = require('jquery');
 ReactiveForms.createElement({
   template: 'timeInput',
   validationEvent: 'blur',
-});
-
-Template.timeInput.onRendered(function () {console.log('test');
-  $('[data-time="pick-a-time"]').lolliclock({ autoclose: true });
+  rendered() {
+    // Init lolliclock
+    $('[data-time="pick-a-time"]').lolliclock({ autoclose: true });
+  },
 });
