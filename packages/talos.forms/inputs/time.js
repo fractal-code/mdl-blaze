@@ -1,6 +1,5 @@
 // Time input
 
-import { Template } from 'meteor/templating';
 import { ReactiveForms } from 'meteor/templates:forms';
 import { checkNpmVersions } from 'meteor/tmeasday:check-npm-versions';
 
