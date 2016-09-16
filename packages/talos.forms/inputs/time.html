@@ -3,7 +3,7 @@
         <input id="{{field}}" name="{{field}}"
             {{attributes}} value="{{value}}"
                class="mdl-textfield__input reactive-element {{inputClass}} js-time-picker"
-               type="{{type}}" autocomplete="off">
+               type="{{type}}" data-time="pick-a-time" autocomplete="off">
         <label class="mdl-textfield__label {{labelClass}}" for="{{field}}">{{label}}</label>
         {{#if submitted}}
             {{#if errorMessage}}<span class="mdl-textfield__error {{errorClass}}">{{errorMessage}}</span>{{/if}}
