@@ -13,11 +13,11 @@ Package.describe({
 Package.onUse(function (api) {
   api.versionsFrom('1.2.1');
   api.use(['ecmascript']);
-  api.use(['livedata', 'underscore', 'deps', 'templating', 'ui', 'blaze', 'ejson', 'reactive-var', 'reactive-dict', 'random', 'jquery', 'sergeyt:typeahead', 'fourseven:scss', 'tmeasday:check-npm-versions@0.3.1'], 'client');
+  api.use(['livedata', 'underscore', 'deps', 'templating', 'ui', 'blaze', 'ejson', 'reactive-var', 'reactive-dict', 'random', 'jquery', 'sergeyt:typeahead', 'fourseven:scss', 'tmeasday:check-npm-versions@0.3.1', 'momentjs:moment@2.15.0'], 'client');
 
   api.use('templates:forms');
 
-  api.imply(['aldeed:simple-schema', 'tmeasday:check-npm-versions@0.3.1', 'sergeyt:typeahead', 'fourseven:scss']);
+  api.imply(['aldeed:simple-schema', 'tmeasday:check-npm-versions@0.3.1', 'sergeyt:typeahead', 'fourseven:scss', 'momentjs:moment@2.15.0']);
 
   api.addFiles([
     // SCSS
@@ -51,6 +51,8 @@ Package.onUse(function (api) {
     'inputs/text.js',
     'inputs/time.html',
     'inputs/time.js',
+    'inputs/date.html',
+    'inputs/date.js',
     'inputs/typeahead.html',
     'inputs/typeahead.js',
 
