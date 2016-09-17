@@ -20,6 +20,7 @@ import '/imports/ui/pages/form/slider.html';
 import '/imports/ui/pages/form/switch.html';
 import '/imports/ui/pages/form/checkbox.html';
 import '/imports/ui/pages/form/radio.html';
+import '/imports/ui/pages/form/date.html';
 
 // Pages JS
 import '/imports/ui/pages/home.js';
@@ -32,3 +33,4 @@ import '/imports/ui/pages/form/slider.js';
 import '/imports/ui/pages/form/switch.js';
 import '/imports/ui/pages/form/checkbox.js';
 import '/imports/ui/pages/form/radio.js';
+import '/imports/ui/pages/form/date.js';
