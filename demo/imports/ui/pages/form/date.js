@@ -23,3 +23,12 @@ Template.dateDemo.helpers({
     };
   },
 });
+
+if (!ReactiveForms.timeOptions) {
+  console.log('No reactive var')
+  ReactiveForms.timeOptions = new ReactiveVar({});
+  ReactiveForms.timeOptions.set({ element: '#demoFieldDate' });
+} else {
+
+}
+
