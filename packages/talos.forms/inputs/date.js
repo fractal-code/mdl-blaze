@@ -1,8 +1,8 @@
 // Text input element
 
+import { Template } from 'meteor/templating';
 import { ReactiveForms } from 'meteor/templates:forms';
 import { checkNpmVersions } from 'meteor/tmeasday:check-npm-versions';
-import { ReactiveVar } from 'meteor/reactive-var';
 import { Tracker } from 'meteor/tracker';
 
 checkNpmVersions({
@@ -19,35 +19,33 @@ const $ = require('jquery');
 ReactiveForms.createElement({
   template: 'dateInput',
   validationEvent: 'input',
-  rendered() {
-    // Create new Date dialog
-    const dialog = new mdDateTimePicker.default({
-      type: 'date',
-    });
+});
 
-    // Get field options
-    let timeOptions = null;
-    Tracker.autorun(() => {
-      timeOptions = ReactiveForms.timeOptions.get();
-      console.log(timeOptions)
+Template.dateInput.onRendered(() => {
+  // Create new Date dialog
+  const dialog = new mdDateTimePicker.default({
+    type: 'date',
+  });
 
-      // If options exist:
-      // 1 - Add the event handler to toggle the dialog
-      // 2 - Attach the input to the trigger (for the onOk to work)
-      // 3 - Add event onOk to get the date
-      if (timeOptions) {
-        $(timeOptions.element).click(() => {
-          dialog.toggle();
-        });
+  // Get field options
+  Tracker.autorun(() => {
+    const timeOptions = ReactiveForms.timeOptions.get();
+    console.log('timeOptions: ', timeOptions);
 
-        dialog.trigger = $(timeOptions.element)[0];
+    // If options exist:
+    // 1 - Add the event handler to toggle the dialog
+    // 2 - Attach the input to the trigger (for the onOk to work)
+    // 3 - Add event onOk to get the date
+    if (timeOptions) {
+      $(timeOptions.element).click(() => {
+        dialog.toggle();
+      });
 
-        $(timeOptions.element).on('onOk', (event) => {
-          $(event.target).val(dialog.time.format('DD/MM/YYYY'));
-        });
-      }
-    });
+      dialog.trigger = $(timeOptions.element)[0];
 
-
-  },
+      $(timeOptions.element).on('onOk', (event) => {
+        $(event.target).val(dialog.time.format('DD/MM/YYYY'));
+      });
+    }
+  });
 });

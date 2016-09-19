@@ -11,6 +11,11 @@ Template.dateDemo.helpers({
       },
     });
   },
+  optionsDate() {
+    return {
+      element: '#demoFieldDate',
+    };
+  },
   action() {
     return function (els, callbacks, changed) {
       console.log('[forms] Action running!');
@@ -25,7 +30,6 @@ Template.dateDemo.helpers({
 });
 
 if (!ReactiveForms.timeOptions) {
-  console.log('No reactive var')
   ReactiveForms.timeOptions = new ReactiveVar({});
   ReactiveForms.timeOptions.set({ element: '#demoFieldDate' });
 } else {

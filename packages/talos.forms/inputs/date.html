@@ -8,7 +8,8 @@
         <label class="mdl-textfield__label {{labelClass}}" for="{{field}}">{{label}}</label>
 
         {{#if submitted}}
-            {{#if errorMessage}}<span class="mdl-textfield__error {{errorClass}}">{{errorMessage}}</span>{{/if}}
+            {{#if errorMessage}}
+                <span class="mdl-textfield__error {{errorClass}}">{{errorMessage}}</span>{{/if}}
         {{/if}}
     </div>
 </template>
