@@ -22,16 +22,15 @@ ReactiveForms.createElement({
 });
 
 Template.dateInput.onRendered(() => {
+  const timeOptions = Template.currentData().options;
+  
+  if (!timeOptions.mdDateTimePicker.type) timeOptions.mdDateTimePicker.type = 'date';
   // Create new Date dialog
-  const dialog = new mdDateTimePicker.default({
-    type: 'date',
-  });
+  const dialog = new mdDateTimePicker.default(timeOptions.mdDateTimePicker);
 
   // Get field options
   Tracker.autorun(() => {
-    const timeOptions = ReactiveForms.timeOptions.get();
     console.log('timeOptions: ', timeOptions);
-
     // If options exist:
     // 1 - Add the event handler to toggle the dialog
     // 2 - Attach the input to the trigger (for the onOk to work)
@@ -44,7 +43,7 @@ Template.dateInput.onRendered(() => {
       dialog.trigger = $(timeOptions.element)[0];
 
       $(timeOptions.element).on('onOk', (event) => {
-        $(event.target).val(dialog.time.format('DD/MM/YYYY'));
+        $(event.target).val(dialog.time.format(timeOptions.moment.format));
       });
     }
   });

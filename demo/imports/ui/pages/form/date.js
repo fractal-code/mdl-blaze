@@ -14,6 +14,12 @@ Template.dateDemo.helpers({
   optionsDate() {
     return {
       element: '#demoFieldDate',
+      moment: {
+        format: 'DD/MM/YYYY',
+      },
+      mdDateTimePicker: {
+        type: 'date',
+      },
     };
   },
   action() {
@@ -29,10 +35,10 @@ Template.dateDemo.helpers({
   },
 });
 
-if (!ReactiveForms.timeOptions) {
-  ReactiveForms.timeOptions = new ReactiveVar({});
-  ReactiveForms.timeOptions.set({ element: '#demoFieldDate' });
-} else {
-
-}
-
+// if (!ReactiveForms.timeOptions) {
+//   ReactiveForms.timeOptions = new ReactiveVar({});
+//   ReactiveForms.timeOptions.set({ element: '#demoFieldDate' });
+// } else {
+//
+// }
+//
