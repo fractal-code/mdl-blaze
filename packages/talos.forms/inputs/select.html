@@ -1,6 +1,6 @@
 <template name="selectInput">
     {{#mdlWrapper}}
-        
+
 
 
 
@@ -24,5 +24,9 @@
                 </ul>
             {{/if}}
         </div>
+
+        {{#if submitted}}
+            {{#if errorMessage}}<span class="mdl-textfield__error {{errorClass}}">{{errorMessage}}</span>{{/if}}
+        {{/if}}
     {{/mdlWrapper}}
 </template>
