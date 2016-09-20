@@ -43,7 +43,10 @@ Template.timeInput.onRendered(() => {
       dialog.trigger = $(timeOptions.element)[0];
 
       $(timeOptions.element).on('onOk', (event) => {
-        $(event.target).val(dialog.time.format(timeOptions.moment.format));
+        $(event.target)
+          .val(dialog.time.format(timeOptions.moment.format))
+          .parent()
+          .addClass('is-dirty');
       });
     }
   });
