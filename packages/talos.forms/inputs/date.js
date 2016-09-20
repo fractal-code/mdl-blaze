@@ -23,7 +23,7 @@ ReactiveForms.createElement({
 
 Template.dateInput.onRendered(() => {
   const timeOptions = Template.currentData().options;
-  
+
   if (!timeOptions.mdDateTimePicker.type) timeOptions.mdDateTimePicker.type = 'date';
   // Create new Date dialog
   const dialog = new mdDateTimePicker.default(timeOptions.mdDateTimePicker);

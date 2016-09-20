@@ -55,8 +55,5 @@ Package.onUse(function (api) {
     'inputs/date.js',
     'inputs/typeahead.html',
     'inputs/typeahead.js',
-
-    // External js
-    'external-js/lolliclock.js',
   ], 'client');
 });
