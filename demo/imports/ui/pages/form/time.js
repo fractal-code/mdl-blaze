@@ -6,11 +6,22 @@ import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 Template.timeDemo.helpers({
   schema() {
     return new SimpleSchema({
-      demo: {
+      demoFieldTime: {
         type: String,
         label: 'Demo',
       },
     });
+  },
+  optionsTime() {
+    return {
+      element: '#demoFieldTime',
+      moment: {
+        format: 'LT',
+      },
+      mdDateTimePicker: {
+        type: 'time',
+      },
+    };
   },
   action() {
     return function (els, callbacks, changed) {
