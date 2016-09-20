@@ -30,7 +30,6 @@ Template.dateInput.onRendered(() => {
 
   // Get field options
   Tracker.autorun(() => {
-    console.log('timeOptions: ', timeOptions);
     // If options exist:
     // 1 - Add the event handler to toggle the dialog
     // 2 - Attach the input to the trigger (for the onOk to work)
