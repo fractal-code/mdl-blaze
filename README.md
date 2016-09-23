@@ -9,7 +9,8 @@ In a Meteor app directory, enter:
 $ meteor add talos:forms
 ```
 
-To use time and date input, install the NPM dependencies:
+
+To use the time and/or the date input, you have to install the NPM dependencies:
 
 ```
 $ meteor npm install md-date-time-picker --save
