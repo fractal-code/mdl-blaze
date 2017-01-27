@@ -67,7 +67,7 @@ Template.selectInput.onRendered(function () {
 
       [].forEach.call(dropdowns, (i) => {
         getmdlSelect.addEventListeners(i);
-        const width = widthDef ? widthDef : (i.querySelector('.mdl-menu').offsetWidth ? i.querySelector('.mdl-menu').offsetWidth : getmdlSelect.defaultValue.width);
+        const width = widthDef ? widthDef : (i.querySelector('.mdl-menu') && i.querySelector('.mdl-menu').offsetWidth ? i.querySelector('.mdl-menu').offsetWidth : getmdlSelect.defaultValue.width);
         i.style.width = width + 'px';
       });
     },
