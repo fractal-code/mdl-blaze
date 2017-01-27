@@ -1,29 +1,32 @@
 <template name="selectInput">
-    {{#mdlWrapper}}
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
-            <input class="mdl-textfield__input reactive-element" type="text" id="{{field}}" value="{{value}}" readonly tabIndex="-1">
-            <label for="{{field}}">
-                <i class="mdl-icon-toggle__label material-icons">
-                    {{#if arrowUp}}
-                        keyboard_arrow_up
-                    {{else}}
-                        keyboard_arrow_down
-                    {{/if}}
-                </i>
-            </label>
-            <label class="mdl-textfield__label {{labelClass}}" for="{{field}}">{{label}}</label>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+        <input class="mdl-textfield__input reactive-element" type="text" id="{{field}}"
+               value="{{value}}" readonly tabIndex="-1">
+        <label for="{{field}}">
+            <i class="mdl-icon-toggle__label material-icons">
+                {{#if arrowUp}}
+                    keyboard_arrow_up
+                {{else}}
+                    keyboard_arrow_down
+                {{/if}}
+            </i>
+        </label>
 
-            {{#if this.options}}
-                <ul for="{{field}}" class="mdl-menu mdl-menu--{{direction}} mdl-js-menu">
-                    {{#each o in this.options}}
-                        <li class="mdl-menu__item js-select-item" data-val="{{o.value}}">{{o.label}}</li>
-                    {{/each}}
-                </ul>
-            {{/if}}
+        {{see this.label}}
+        <label class="mdl-textfield__label {{this.labelClass}}" for="{{field}}">{{this.label}}</label>
 
-            {{#if submitted}}
-                {{#if errorMessage}}<span class="mdl-textfield__error {{errorClass}}">{{errorMessage}}</span>{{/if}}
-            {{/if}}
-        </div>
-    {{/mdlWrapper}}
+        {{#if this.options}}
+            <ul for="{{field}}" class="mdl-menu mdl-menu--{{direction}} mdl-js-menu">
+                {{#each o in this.options}}
+                    <li class="mdl-menu__item js-select-item"
+                        data-val="{{o.value}}">{{o.label}}</li>
+                {{/each}}
+            </ul>
+        {{/if}}
+
+        {{#if submitted}}
+            {{#if errorMessage}}
+                <span class="mdl-textfield__error {{errorClass}}">{{errorMessage}}</span>{{/if}}
+        {{/if}}
+    </div>
 </template>
