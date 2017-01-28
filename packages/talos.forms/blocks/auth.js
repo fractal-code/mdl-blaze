@@ -6,7 +6,7 @@ import { ReactiveForms } from 'meteor/templates:forms';
 import { checkNpmVersions } from 'meteor/tmeasday:check-npm-versions';
 
 checkNpmVersions({
-  jquery: '2.2.4',
+  jquery: '3.1.1',
 }, 'talos:forms');
 
 const $ = require('jquery');

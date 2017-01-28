@@ -2,7 +2,7 @@
 <template name="dateInput">
     <div id="{{field}}-container" class="mdl-textfield mdl-js-textfield {{containerClass}}">
         <input id="{{field}}" name="{{field}}"
-            {{attributes}} value="{{value}}"
+            {{attributes}} value="{{formatDate value this.options.moment.format}}"
                class="mdl-textfield__input reactive-element {{inputClass}}"
                type="{{type}}" data-date="mdDateTimePicker" autocomplete="off">
         <label class="mdl-textfield__label {{labelClass}}" for="{{field}}">{{label}}</label>

@@ -10,7 +10,7 @@ checkNpmVersions({
 }, 'talos:forms');
 
 checkNpmVersions({
-  jquery: '2.2.4',
+  jquery: '3.1.1',
 }, 'talos:forms');
 
 const mdDateTimePicker = require('md-date-time-picker');
